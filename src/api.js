@@ -1,4 +1,3 @@
-// src/api.js
 import axios from 'axios';
 
 const axiosInstance = axios.create({
@@ -8,14 +7,12 @@ const axiosInstance = axios.create({
   },
 });
 
-// Dynamically attach token only if it exists
+// ✅ Only attach token if it exists
 axiosInstance.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('token');
     if (token) {
-      config.headers.Authorization = `Token ${token}`;
-    } else {
-      delete config.headers.Authorization;
+      config.headers['Authorization'] = `Token ${token}`;
     }
     return config;
   },
