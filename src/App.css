@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  form input,
+  form textarea,
+  form button {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #343a40;
+    color: white;
+    padding: 1rem 2rem;
+  }
+  
+  .navbar a {
+    color: white;
+    margin-left: 1rem;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+  
+  .blog-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
