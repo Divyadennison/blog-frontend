@@ -6,7 +6,7 @@ function BlogDetail() {
   const { id } = useParams(); 
   const [blog, setBlog] = useState(null); 
   const [error, setError] = useState(null); 
-  const [currentUser, setCurrentUser] = useState(null); // ✅ Add this
+  const [currentUser, setCurrentUser] = useState(null); 
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -43,7 +43,7 @@ function BlogDetail() {
     try {
       await api.delete(`/blogs/${id}/`);
       alert('Blog deleted successfully!');
-      navigate('/blogs');
+      navigate('/'); // ✅ redirect to homepage
     } catch (err) {
       console.error('Failed to delete blog:', err);
       alert('Failed to delete blog');

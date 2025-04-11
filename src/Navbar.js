@@ -11,25 +11,59 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar">
-      <Link to="/" className="blog-title">Blog App</Link>
-      <div>
+    <nav style={styles.navbar}>
+      <Link to="/blogs" style={styles.logo}>Blog App</Link>
+      <div style={styles.links}>
         {token ? (
           <>
-            <Link to="/create">Create Blog</Link>
-            <button onClick={handleLogout} style={{ marginLeft: '1rem', background: 'none', color: 'white', border: 'none', cursor: 'pointer' }}>
-              Logout
-            </button>
+            <Link to="/create" style={styles.link}>Create Blog</Link>
+            <button onClick={handleLogout} style={styles.button}>Logout</button>
           </>
         ) : (
           <>
-            <Link to="/login">Login</Link>
-            <Link to="/signup">Signup</Link>
+            <Link to="/login" style={styles.link}>Login</Link>
+            <Link to="/signup" style={styles.link}>Signup</Link>
           </>
         )}
       </div>
-    </div>
+    </nav>
   );
+};
+
+const styles = {
+  navbar: {
+    backgroundColor: '#282c34',
+    padding: '1rem 2rem',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    color: 'white',
+  },
+  logo: {
+    color: 'white',
+    textDecoration: 'none',
+    fontSize: '1.5rem',
+    fontWeight: 'bold',
+  },
+  links: {
+    display: 'flex',
+    gap: '1rem',
+    alignItems: 'center',
+  },
+  link: {
+    color: 'white',
+    textDecoration: 'none',
+    fontSize: '1rem',
+  },
+  button: {
+    backgroundColor: '#dc3545',
+    border: 'none',
+    padding: '0.5rem 1rem',
+    color: 'white',
+    borderRadius: '4px',
+    cursor: 'pointer',
+    fontSize: '1rem',
+  },
 };
 
 export default Navbar;
