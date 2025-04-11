@@ -15,8 +15,8 @@ function BlogList() {
       .then(response => {
         if (response.data.results) {
           setBlogs(response.data.results);
-          setNextPage(response.data.next?.replace('http://localhost:8000/api', '') || null);
-          setPrevPage(response.data.previous?.replace('http://localhost:8000/api', '') || null);
+          setNextPage(response.data.next?.replace('https://blog-backend-z9hh.onrender.com/api', '') || null);
+          setPrevPage(response.data.previous?.replace('https://blog-backend-z9hh.onrender.com/api', '') || null);
         } else {
           setBlogs([]);
         }
